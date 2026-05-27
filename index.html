@@ -1,0 +1,1358 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>GWA Supply Chain Solutions</title>
+
+<meta name="description" content="GWA Supply Chain Solutions — Onafhankelijk supply chain advies voor logistiek, productie en retail. Doe de gratis quickscan."/>
+<meta property="og:title" content="GWA Supply Chain Solutions"/>
+<meta property="og:description" content="Wij verbinden alle schakels in uw keten. Doe de gratis supply chain quickscan."/>
+<meta property="og:type" content="website"/>
+<meta property="og:url" content="https://www.gwasupplychainsolutions.nl"/>
+<meta property="og:image" content="https://www.gwasupplychainsolutions.nl/og-image.png"/>
+<meta name="twitter:card" content="summary_large_image"/>
+<meta name="twitter:title" content="GWA Supply Chain Solutions"/>
+<meta name="twitter:description" content="Wij verbinden alle schakels in uw keten."/>
+<link rel="canonical" href="https://www.gwasupplychainsolutions.nl"/>
+<link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Sans:ital,wght@0,300;0,400;0,500;1,300&display=swap" rel="stylesheet"/>
+<style>
+:root {
+  --navy:    #060F1E;
+  --navy2:   #0A1F35;
+  --navy3:   #0D2A40;
+  --teal:    #00C9A7;
+  --teal2:   #00E8C2;
+  --teal-dim: rgba(0,201,167,0.12);
+  --teal-glow: rgba(0,201,167,0.28);
+  --white:   #FFFFFF;
+  --grey:    rgba(255,255,255,0.55);
+  --grey2:   rgba(255,255,255,0.08);
+  --border:  rgba(0,201,167,0.18);
+  --border2: rgba(255,255,255,0.08);
+}
+
+*{margin:0;padding:0;box-sizing:border-box;}
+html{scroll-behavior:smooth;}
+
+body{
+  background:var(--navy);
+  color:var(--white);
+  font-family:'DM Sans',sans-serif;
+  overflow-x:hidden;
+  cursor:default;
+}
+
+/* ─── SCROLLBAR ─── */
+::-webkit-scrollbar{width:6px;}
+::-webkit-scrollbar-track{background:var(--navy);}
+::-webkit-scrollbar-thumb{background:var(--teal);border-radius:3px;}
+
+/* ─── BACKGROUND TEXTURE ─── */
+.bg-dots{
+  position:fixed;inset:0;
+  background-image:radial-gradient(circle,rgba(255,255,255,0.035) 1px,transparent 1px);
+  background-size:30px 30px;
+  pointer-events:none;z-index:0;
+}
+
+/* ─── NAV ─── */
+nav{
+  position:fixed;top:0;left:0;right:0;z-index:100;
+  padding:0 6%;
+  height:72px;
+  display:flex;align-items:center;justify-content:space-between;
+  background:rgba(6,15,30,0.85);
+  backdrop-filter:blur(20px);
+  border-bottom:1px solid var(--border2);
+  transition:all 0.3s;
+}
+
+.nav-logo{
+  display:flex;align-items:center;gap:10px;
+  text-decoration:none;
+}
+
+.nav-logo svg{width:36px;height:36px;}
+
+.nav-logo-text{
+  font-family:'Syne',sans-serif;
+  font-size:17px;font-weight:800;
+  color:#fff;letter-spacing:0.5px;
+}
+.nav-logo-text span{color:var(--teal);}
+
+.nav-links{
+  display:flex;align-items:center;gap:36px;
+  list-style:none;
+}
+
+.nav-links a{
+  color:var(--grey);
+  text-decoration:none;
+  font-size:14px;font-weight:400;
+  letter-spacing:0.3px;
+  transition:color 0.2s;
+}
+.nav-links a:hover{color:#fff;}
+
+.nav-cta{
+  background:var(--teal);
+  color:var(--navy)!important;
+  padding:10px 22px;
+  border-radius:8px;
+  font-weight:600!important;
+  font-size:13px!important;
+  letter-spacing:0.5px;
+  transition:all 0.2s!important;
+  box-shadow:0 0 20px var(--teal-glow);
+}
+.nav-cta:hover{
+  background:var(--teal2)!important;
+  transform:translateY(-1px);
+  box-shadow:0 4px 24px var(--teal-glow)!important;
+}
+
+/* ─── SECTIONS WRAPPER ─── */
+section{position:relative;z-index:1;}
+
+/* ─── HERO ─── */
+#hero{
+  min-height:100vh;
+  display:flex;align-items:center;
+  padding:120px 6% 80px;
+  position:relative;
+  overflow:hidden;
+}
+
+.hero-glow{
+  position:absolute;
+  width:700px;height:700px;
+  border-radius:50%;
+  background:radial-gradient(circle,rgba(0,201,167,0.09) 0%,transparent 70%);
+  right:-150px;top:50%;transform:translateY(-50%);
+  pointer-events:none;
+}
+
+.hero-glow2{
+  position:absolute;
+  width:400px;height:400px;
+  border-radius:50%;
+  background:radial-gradient(circle,rgba(14,61,92,0.5) 0%,transparent 70%);
+  left:-100px;bottom:-100px;
+  pointer-events:none;
+}
+
+.hero-content{
+  max-width:640px;
+  animation:fadeUp 0.9s ease both;
+}
+
+.hero-badge{
+  display:inline-flex;align-items:center;gap:8px;
+  background:var(--teal-dim);
+  border:1px solid var(--border);
+  color:var(--teal);
+  font-size:11px;font-weight:500;
+  letter-spacing:3px;text-transform:uppercase;
+  padding:7px 16px;border-radius:100px;
+  margin-bottom:28px;
+}
+
+.hero-badge::before{
+  content:'';width:6px;height:6px;
+  border-radius:50%;background:var(--teal);
+  box-shadow:0 0 8px var(--teal);
+  animation:blink 2s infinite;
+}
+
+@keyframes blink{0%,100%{opacity:1;}50%{opacity:0.3;}}
+
+h1{
+  font-family:'Syne',sans-serif;
+  font-size:clamp(38px,5.5vw,66px);
+  font-weight:800;
+  line-height:1.1;
+  margin-bottom:24px;
+  letter-spacing:-1px;
+}
+
+h1 .accent{
+  background:linear-gradient(135deg,var(--teal),var(--teal2));
+  -webkit-background-clip:text;
+  -webkit-text-fill-color:transparent;
+  background-clip:text;
+}
+
+.hero-sub{
+  font-size:17px;font-weight:300;
+  color:var(--grey);line-height:1.7;
+  margin-bottom:40px;max-width:520px;
+}
+
+.hero-btns{display:flex;gap:16px;flex-wrap:wrap;}
+
+.btn-primary{
+  background:linear-gradient(135deg,var(--teal),#00a88a);
+  color:var(--navy);
+  padding:15px 32px;border-radius:10px;
+  font-family:'Syne',sans-serif;
+  font-size:14px;font-weight:700;
+  letter-spacing:0.5px;
+  border:none;cursor:pointer;
+  text-decoration:none;display:inline-flex;
+  align-items:center;gap:8px;
+  box-shadow:0 4px 28px var(--teal-glow);
+  transition:all 0.25s;
+}
+.btn-primary:hover{transform:translateY(-3px);box-shadow:0 8px 36px var(--teal-glow);}
+
+.btn-ghost{
+  background:transparent;
+  color:var(--grey);
+  padding:15px 32px;border-radius:10px;
+  border:1px solid var(--border2);
+  font-family:'DM Sans',sans-serif;
+  font-size:14px;font-weight:400;
+  cursor:pointer;
+  text-decoration:none;display:inline-flex;
+  align-items:center;gap:8px;
+  transition:all 0.25s;
+}
+.btn-ghost:hover{border-color:var(--teal);color:#fff;}
+
+.hero-stats{
+  display:flex;gap:48px;
+  margin-top:56px;padding-top:40px;
+  border-top:1px solid var(--border2);
+  flex-wrap:wrap;
+}
+
+.stat-item{}
+.stat-num{
+  font-family:'Syne',sans-serif;
+  font-size:32px;font-weight:800;
+  color:var(--teal);
+  line-height:1;margin-bottom:6px;
+}
+.stat-label{font-size:12px;color:var(--grey);letter-spacing:1px;text-transform:uppercase;}
+
+/* Globe SVG */
+.hero-visual{
+  position:absolute;right:6%;top:50%;
+  transform:translateY(-50%);
+  width:min(420px,40vw);
+  animation:floatGlobe 6s ease-in-out infinite;
+  display:flex;align-items:center;justify-content:center;
+}
+
+@keyframes floatGlobe{
+  0%,100%{transform:translateY(-50%) translateY(0);}
+  50%{transform:translateY(-50%) translateY(-16px);}
+}
+
+@media(max-width:900px){.hero-visual{display:none;}}
+
+/* ─── DIENSTEN ─── */
+#diensten{
+  padding:100px 6%;
+  background:linear-gradient(180deg,var(--navy) 0%,var(--navy2) 100%);
+}
+
+.section-label{
+  font-size:11px;color:var(--teal);
+  letter-spacing:4px;text-transform:uppercase;
+  font-weight:600;margin-bottom:16px;
+}
+
+h2{
+  font-family:'Syne',sans-serif;
+  font-size:clamp(28px,4vw,44px);
+  font-weight:800;line-height:1.15;
+  margin-bottom:16px;
+}
+
+.section-sub{
+  color:var(--grey);font-size:16px;
+  font-weight:300;line-height:1.7;
+  max-width:500px;margin-bottom:60px;
+}
+
+.services-grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+  gap:24px;
+}
+
+.service-card{
+  background:var(--grey2);
+  border:1px solid var(--border2);
+  border-radius:16px;
+  padding:36px 32px;
+  transition:all 0.3s;
+  position:relative;overflow:hidden;
+}
+
+.service-card::before{
+  content:'';
+  position:absolute;inset:0;
+  background:linear-gradient(135deg,var(--teal-dim),transparent);
+  opacity:0;transition:opacity 0.3s;
+  border-radius:16px;
+}
+
+.service-card:hover{
+  border-color:var(--teal);
+  transform:translateY(-6px);
+  box-shadow:0 20px 40px rgba(0,0,0,0.3);
+}
+.service-card:hover::before{opacity:1;}
+
+.service-icon{
+  width:52px;height:52px;
+  background:var(--teal-dim);
+  border:1px solid var(--border);
+  border-radius:12px;
+  display:flex;align-items:center;justify-content:center;
+  font-size:22px;margin-bottom:24px;
+}
+
+.service-title{
+  font-family:'Syne',sans-serif;
+  font-size:19px;font-weight:700;
+  margin-bottom:12px;
+}
+
+.service-desc{
+  color:var(--grey);font-size:14px;
+  line-height:1.7;font-weight:300;
+}
+
+.service-tags{
+  display:flex;flex-wrap:wrap;gap:8px;
+  margin-top:20px;
+}
+
+.tag{
+  background:rgba(0,201,167,0.08);
+  border:1px solid rgba(0,201,167,0.15);
+  color:var(--teal);
+  font-size:11px;padding:4px 10px;
+  border-radius:100px;letter-spacing:0.5px;
+}
+
+/* ─── HOE WE WERKEN ─── */
+#aanpak{
+  padding:100px 6%;
+  background:var(--navy2);
+}
+
+.process-grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+  gap:0;
+  position:relative;
+  margin-top:60px;
+}
+
+.process-grid::before{
+  content:'';
+  position:absolute;
+  top:36px;left:calc(12.5% + 36px);
+  right:calc(12.5% + 36px);
+  height:1px;
+  background:linear-gradient(90deg,transparent,var(--teal),transparent);
+  opacity:0.3;
+}
+
+.process-step{
+  text-align:center;padding:0 20px;
+  position:relative;
+}
+
+.step-num{
+  width:72px;height:72px;
+  border-radius:50%;
+  background:var(--navy);
+  border:2px solid var(--border);
+  display:flex;align-items:center;justify-content:center;
+  margin:0 auto 24px;
+  font-family:'Syne',sans-serif;
+  font-size:22px;font-weight:800;
+  color:var(--teal);
+  position:relative;z-index:1;
+  transition:all 0.3s;
+}
+
+.process-step:hover .step-num{
+  background:var(--teal);
+  color:var(--navy);
+  border-color:var(--teal);
+  box-shadow:0 0 28px var(--teal-glow);
+}
+
+.step-title{
+  font-family:'Syne',sans-serif;
+  font-size:16px;font-weight:700;
+  margin-bottom:10px;
+}
+
+.step-desc{color:var(--grey);font-size:13px;line-height:1.7;font-weight:300;}
+
+/* ─── OVER GWA ─── */
+#over{
+  padding:100px 6%;
+  background:var(--navy);
+}
+
+.over-grid{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:80px;align-items:center;
+}
+
+@media(max-width:768px){.over-grid{grid-template-columns:1fr;gap:48px;}}
+
+.over-visual{
+  position:relative;
+  display:flex;align-items:center;justify-content:center;
+}
+
+.over-card{
+  background:var(--grey2);
+  border:1px solid var(--border);
+  border-radius:20px;
+  padding:40px;
+  width:100%;
+}
+
+.over-card-header{
+  display:flex;align-items:center;gap:14px;
+  margin-bottom:32px;
+  padding-bottom:24px;
+  border-bottom:1px solid var(--border2);
+}
+
+.over-avatar{
+  width:52px;height:52px;
+  border-radius:50%;
+  background:linear-gradient(135deg,var(--navy3),var(--teal));
+  display:flex;align-items:center;justify-content:center;
+  font-family:'Syne',sans-serif;
+  font-size:18px;font-weight:800;
+  color:#fff;
+}
+
+.over-name{font-family:'Syne',sans-serif;font-size:16px;font-weight:700;}
+.over-role{font-size:12px;color:var(--teal);letter-spacing:1px;margin-top:2px;}
+
+.over-values{display:flex;flex-direction:column;gap:16px;}
+.over-value{
+  display:flex;align-items:center;gap:14px;
+  padding:14px 16px;
+  background:rgba(0,201,167,0.05);
+  border:1px solid rgba(0,201,167,0.1);
+  border-radius:10px;
+}
+.over-value-icon{font-size:18px;}
+.over-value-text{font-size:13px;color:rgba(255,255,255,0.8);line-height:1.5;}
+
+.over-content .section-label{margin-bottom:12px;}
+.over-content h2{margin-bottom:20px;}
+.over-content p{
+  color:var(--grey);font-size:15px;
+  line-height:1.8;font-weight:300;
+  margin-bottom:20px;
+}
+
+.usp-list{
+  list-style:none;
+  display:flex;flex-direction:column;gap:12px;
+  margin-top:32px;
+}
+
+.usp-list li{
+  display:flex;align-items:center;gap:12px;
+  font-size:14px;color:rgba(255,255,255,0.85);
+}
+
+.usp-list li::before{
+  content:'';
+  width:20px;height:20px;
+  border-radius:50%;
+  background:var(--teal-dim);
+  border:1px solid var(--teal);
+  display:flex;align-items:center;justify-content:center;
+  flex-shrink:0;
+  background-image:url("data:image/svg+xml,%3Csvg width='10' height='8' viewBox='0 0 10 8' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M1 4L3.5 6.5L9 1' stroke='%2300C9A7' stroke-width='1.5' stroke-linecap='round'/%3E%3C/svg%3E");
+  background-repeat:no-repeat;
+  background-position:center;
+}
+
+/* ─── QUICKSCAN SECTION ─── */
+#quickscan{
+  padding:100px 6%;
+  background:linear-gradient(180deg,var(--navy2) 0%,var(--navy) 100%);
+}
+
+.scan-wrap{
+  max-width:760px;margin:0 auto;
+}
+
+.progress-wrap{margin-bottom:40px;}
+.progress-meta{display:flex;justify-content:space-between;margin-bottom:10px;}
+.progress-label{font-size:11px;color:var(--grey);letter-spacing:2px;text-transform:uppercase;}
+.progress-count{font-family:'Syne',sans-serif;font-size:13px;color:var(--teal);font-weight:700;}
+.progress-track{height:3px;background:rgba(255,255,255,0.07);border-radius:100px;overflow:hidden;}
+.progress-fill{height:100%;background:linear-gradient(90deg,var(--teal),var(--teal2));border-radius:100px;transition:width 0.5s cubic-bezier(0.4,0,0.2,1);box-shadow:0 0 10px var(--teal-glow);}
+
+.scan-card{
+  background:rgba(255,255,255,0.03);
+  border:1px solid var(--border);
+  border-radius:20px;
+  padding:44px;
+  backdrop-filter:blur(10px);
+  display:none;
+  animation:fadeUp 0.4s ease both;
+}
+.scan-card.active{display:block;}
+
+.scan-num{font-size:11px;color:var(--teal);letter-spacing:3px;text-transform:uppercase;font-weight:600;margin-bottom:8px;}
+.scan-title{font-family:'Syne',sans-serif;font-size:24px;font-weight:800;margin-bottom:8px;}
+.scan-desc{color:var(--grey);font-size:14px;line-height:1.7;margin-bottom:32px;}
+
+.question{margin-bottom:30px;}
+.q-label{font-size:15px;font-weight:500;margin-bottom:14px;color:rgba(255,255,255,0.9);line-height:1.5;}
+.q-label .qn{color:var(--teal);font-family:'Syne',sans-serif;font-weight:700;margin-right:6px;}
+
+.options{display:grid;gap:10px;}
+
+.opt{
+  background:rgba(255,255,255,0.03);
+  border:1px solid rgba(255,255,255,0.09);
+  color:rgba(255,255,255,0.7);
+  padding:14px 18px;border-radius:10px;
+  font-family:'DM Sans',sans-serif;font-size:14px;
+  cursor:pointer;text-align:left;
+  transition:all 0.2s;
+  display:flex;align-items:center;gap:12px;
+}
+.opt:hover{background:var(--teal-dim);border-color:var(--teal);color:#fff;transform:translateX(4px);}
+.opt.sel{background:var(--teal-dim);border-color:var(--teal);color:var(--teal);font-weight:500;}
+
+.opt .chk{
+  width:18px;height:18px;border-radius:50%;
+  border:1.5px solid currentColor;flex-shrink:0;
+  display:flex;align-items:center;justify-content:center;
+  font-size:10px;transition:all 0.2s;
+}
+.opt.sel .chk{background:var(--teal);border-color:var(--teal);color:var(--navy);}
+.opt.sel .chk::after{content:'✓';font-weight:700;}
+
+.scale-row{display:flex;gap:8px;flex-wrap:wrap;}
+.scl{
+  width:46px;height:46px;border-radius:10px;
+  border:1px solid rgba(255,255,255,0.09);
+  background:rgba(255,255,255,0.03);
+  color:var(--grey);
+  font-family:'Syne',sans-serif;font-size:15px;font-weight:700;
+  cursor:pointer;transition:all 0.2s;
+  display:flex;align-items:center;justify-content:center;
+}
+.scl:hover{border-color:var(--teal);color:#fff;background:var(--teal-dim);}
+.scl.sel{background:var(--teal);border-color:var(--teal);color:var(--navy);box-shadow:0 0 16px var(--teal-glow);}
+.scale-lbl{display:flex;justify-content:space-between;margin-top:8px;font-size:11px;color:var(--grey);}
+
+.form-grid{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-bottom:20px;}
+@media(max-width:500px){.form-grid{grid-template-columns:1fr;}}
+.fg label{display:block;font-size:11px;color:var(--teal);letter-spacing:2px;text-transform:uppercase;margin-bottom:8px;font-weight:500;}
+.fg input{
+  width:100%;background:rgba(255,255,255,0.04);
+  border:1px solid var(--border);border-radius:10px;
+  padding:12px 14px;color:#fff;
+  font-family:'DM Sans',sans-serif;font-size:14px;
+  outline:none;transition:border-color 0.2s;
+}
+.fg input:focus{border-color:var(--teal);background:var(--teal-dim);}
+.fg input::placeholder{color:rgba(255,255,255,0.2);}
+.fg.full{grid-column:1/-1;}
+
+.divider{height:1px;background:var(--border2);margin:28px 0;}
+
+.nav-row{display:flex;justify-content:space-between;align-items:center;margin-top:36px;gap:16px;}
+
+.btn-prev{
+  background:transparent;border:1px solid rgba(255,255,255,0.12);
+  color:var(--grey);padding:12px 22px;border-radius:10px;
+  font-family:'DM Sans',sans-serif;font-size:14px;
+  cursor:pointer;transition:all 0.2s;
+  display:flex;align-items:center;gap:8px;
+}
+.btn-prev:hover{border-color:rgba(255,255,255,0.25);color:#fff;}
+
+.btn-next{
+  background:linear-gradient(135deg,var(--teal),#00a88a);
+  border:none;color:var(--navy);
+  padding:14px 30px;border-radius:10px;
+  font-family:'Syne',sans-serif;font-size:14px;font-weight:700;
+  cursor:pointer;transition:all 0.2s;
+  display:flex;align-items:center;gap:8px;
+  letter-spacing:0.5px;
+  box-shadow:0 4px 20px var(--teal-glow);
+  margin-left:auto;
+}
+.btn-next:hover{transform:translateY(-2px);box-shadow:0 8px 28px var(--teal-glow);}
+
+/* Results */
+.result-screen{display:none;animation:fadeUp 0.6s ease both;}
+.result-screen.active{display:block;}
+
+.result-header{text-align:center;padding:48px 0 40px;}
+.result-icon{
+  width:84px;height:84px;border-radius:50%;
+  background:var(--teal-dim);border:2px solid var(--teal);
+  display:flex;align-items:center;justify-content:center;
+  margin:0 auto 24px;font-size:36px;
+  animation:pulseAnim 2.5s infinite;
+}
+@keyframes pulseAnim{
+  0%,100%{box-shadow:0 0 0 0 var(--teal-glow);}
+  50%{box-shadow:0 0 0 20px transparent;}
+}
+.result-title{font-family:'Syne',sans-serif;font-size:32px;font-weight:800;margin-bottom:12px;background:linear-gradient(135deg,#fff,var(--teal));-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;}
+.result-sub{color:var(--grey);font-size:15px;margin-bottom:40px;}
+
+.score-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(160px,1fr));gap:16px;margin-bottom:28px;}
+.score-card{background:rgba(255,255,255,0.03);border:1px solid var(--border);border-radius:14px;padding:24px;text-align:center;}
+.score-val{font-family:'Syne',sans-serif;font-size:38px;font-weight:800;color:var(--teal);margin-bottom:6px;}
+.score-lbl{font-size:11px;color:var(--grey);letter-spacing:1.5px;text-transform:uppercase;}
+
+.insights{background:rgba(255,255,255,0.03);border:1px solid var(--border);border-radius:16px;padding:36px;margin-bottom:28px;}
+.insights h3{font-family:'Syne',sans-serif;font-size:14px;font-weight:700;color:var(--teal);letter-spacing:2px;text-transform:uppercase;margin-bottom:24px;}
+.ins-item{display:flex;gap:14px;padding:16px 0;border-bottom:1px solid rgba(255,255,255,0.05);align-items:flex-start;}
+.ins-item:last-child{border-bottom:none;}
+.ins-dot{width:8px;height:8px;border-radius:50%;margin-top:7px;flex-shrink:0;}
+.ins-dot.good{background:var(--teal);box-shadow:0 0 8px var(--teal);}
+.ins-dot.warn{background:#F5A340;box-shadow:0 0 8px rgba(245,163,64,0.5);}
+.ins-text{font-size:14px;color:rgba(255,255,255,0.8);line-height:1.7;}
+.ins-text strong{color:#fff;}
+
+.cta-box{
+  background:linear-gradient(135deg,rgba(0,201,167,0.1),rgba(14,61,92,0.25));
+  border:1px solid var(--teal);border-radius:20px;
+  padding:44px;text-align:center;
+}
+.cta-box h3{font-family:'Syne',sans-serif;font-size:24px;font-weight:800;margin-bottom:12px;}
+.cta-box p{color:var(--grey);font-size:15px;margin-bottom:28px;line-height:1.7;max-width:480px;margin-left:auto;margin-right:auto;}
+
+/* ─── CONTACT ─── */
+#contact{
+  padding:100px 6%;
+  background:var(--navy2);
+}
+
+.contact-grid{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:80px;align-items:start;
+}
+@media(max-width:768px){.contact-grid{grid-template-columns:1fr;gap:48px;}}
+
+.contact-info h2{margin-bottom:20px;}
+.contact-info p{color:var(--grey);font-size:15px;line-height:1.8;font-weight:300;margin-bottom:36px;}
+
+.contact-items{display:flex;flex-direction:column;gap:20px;}
+.contact-item{
+  display:flex;align-items:center;gap:16px;
+  padding:16px 20px;
+  background:var(--grey2);
+  border:1px solid var(--border2);
+  border-radius:12px;
+}
+.contact-item-icon{
+  width:42px;height:42px;
+  background:var(--teal-dim);border:1px solid var(--border);
+  border-radius:10px;display:flex;align-items:center;justify-content:center;
+  font-size:18px;flex-shrink:0;
+}
+.contact-item-label{font-size:11px;color:var(--teal);letter-spacing:1.5px;text-transform:uppercase;margin-bottom:3px;}
+.contact-item-val{font-size:14px;color:rgba(255,255,255,0.85);}
+
+.contact-form-wrap{
+  background:rgba(255,255,255,0.03);
+  border:1px solid var(--border);
+  border-radius:20px;padding:40px;
+}
+.contact-form-title{font-family:'Syne',sans-serif;font-size:20px;font-weight:700;margin-bottom:28px;}
+.cf-group{margin-bottom:20px;}
+.cf-group label{display:block;font-size:11px;color:var(--teal);letter-spacing:2px;text-transform:uppercase;margin-bottom:8px;font-weight:500;}
+.cf-group input,
+.cf-group textarea{
+  width:100%;background:rgba(255,255,255,0.04);
+  border:1px solid var(--border2);border-radius:10px;
+  padding:12px 14px;color:#fff;
+  font-family:'DM Sans',sans-serif;font-size:14px;
+  outline:none;transition:border-color 0.2s;
+}
+.cf-group textarea{resize:vertical;min-height:100px;}
+.cf-group input:focus,.cf-group textarea:focus{border-color:var(--teal);background:var(--teal-dim);}
+.cf-group input::placeholder,.cf-group textarea::placeholder{color:rgba(255,255,255,0.2);}
+
+/* ─── FOOTER ─── */
+footer{
+  background:var(--navy);
+  border-top:1px solid var(--border2);
+  padding:48px 6% 36px;
+}
+.footer-top{
+  display:flex;justify-content:space-between;
+  align-items:center;flex-wrap:wrap;gap:24px;
+  padding-bottom:36px;
+  border-bottom:1px solid var(--border2);
+  margin-bottom:28px;
+}
+.footer-links{display:flex;gap:32px;flex-wrap:wrap;}
+.footer-links a{color:var(--grey);text-decoration:none;font-size:13px;transition:color 0.2s;}
+.footer-links a:hover{color:var(--teal);}
+.footer-bottom{display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:16px;}
+.footer-copy{color:var(--grey);font-size:12px;}
+.footer-teal{color:var(--teal);}
+
+/* ─── ANIMATIONS ─── */
+@keyframes fadeUp{
+  from{opacity:0;transform:translateY(28px);}
+  to{opacity:1;transform:translateY(0);}
+}
+@keyframes fadeDown{
+  from{opacity:0;transform:translateY(-20px);}
+  to{opacity:1;transform:translateY(0);}
+}
+
+.reveal{
+  opacity:0;transform:translateY(32px);
+  transition:opacity 0.7s ease,transform 0.7s ease;
+}
+.reveal.visible{opacity:1;transform:translateY(0);}
+
+/* ─── MOBILE ─── */
+@media(max-width:768px){
+  nav{padding:0 5%;}
+  .nav-links{display:none;}
+  #hero{padding:100px 5% 60px;}
+  h1{font-size:36px;}
+  #diensten,#aanpak,#over,#quickscan,#contact{padding:72px 5%;}
+  .scan-card{padding:28px 24px;}
+  .process-grid::before{display:none;}
+  .process-grid{gap:32px;}
+}
+</style>
+</head>
+<body>
+
+<div class="bg-dots"></div>
+
+<!-- ─── NAV ─── -->
+<nav>
+  <a href="#hero" class="nav-logo">
+    <svg viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <circle cx="18" cy="18" r="16" fill="url(#nl1)" stroke="#00C9A7" stroke-width="1.2"/>
+      <ellipse cx="18" cy="18" rx="16" ry="6" fill="none" stroke="rgba(255,255,255,0.2)" stroke-width="0.7"/>
+      <line x1="2" y1="18" x2="34" y2="18" stroke="rgba(255,255,255,0.2)" stroke-width="0.7"/>
+      <line x1="18" y1="2" x2="18" y2="34" stroke="rgba(255,255,255,0.2)" stroke-width="0.7"/>
+      <g transform="translate(18,18) rotate(-38)">
+        <rect x="-7" y="-3" width="14" height="6" rx="3" fill="none" stroke="#00C9A7" stroke-width="1.8"/>
+        <rect x="-3" y="-7" width="6" height="14" rx="3" fill="none" stroke="#00C9A7" stroke-width="1.8"/>
+      </g>
+      <defs>
+        <linearGradient id="nl1" x1="0" y1="0" x2="36" y2="36" gradientUnits="userSpaceOnUse">
+          <stop offset="0%" stop-color="#0E3D5C"/>
+          <stop offset="100%" stop-color="#00C9A7"/>
+        </linearGradient>
+      </defs>
+    </svg>
+    <div class="nav-logo-text">GWA <span>SUPPLY CHAIN</span></div>
+  </a>
+  <ul class="nav-links">
+    <li><a href="#diensten">Diensten</a></li>
+    <li><a href="#aanpak">Aanpak</a></li>
+    <li><a href="#over">Over ons</a></li>
+    <li><a href="#quickscan">Quickscan</a></li>
+    <li><a href="#quickscan" class="nav-cta">Start Quickscan</a></li>
+  </ul>
+</nav>
+
+<!-- ─── HERO ─── -->
+<section id="hero">
+  <div class="hero-glow"></div>
+  <div class="hero-glow2"></div>
+
+  <div class="hero-content">
+    <div class="hero-badge">Supply Chain Experts</div>
+    <h1>Wij verbinden<br><span class="accent">alle schakels</span><br>in uw keten</h1>
+    <p class="hero-sub">GWA Supply Chain Solutions optimaliseert uw logistieke processen van inkoop tot levering. Strategisch advies, praktische uitvoering, meetbaar resultaat.</p>
+    <div class="hero-btns">
+      <a href="#quickscan" class="btn-primary">
+        Start gratis quickscan
+        <svg width="16" height="16" viewBox="0 0 16 16" fill="currentColor"><path d="M3 8h10M9 4l4 4-4 4"/></svg>
+      </a>
+      <a href="#diensten" class="btn-ghost" style="text-decoration:none;">Bekijk onze diensten ↓</a>
+    </div>
+    <div class="hero-stats">
+      <div class="stat-item"><div class="stat-num">15+</div><div class="stat-label">Jaar ervaring</div></div>
+      <div class="stat-item"><div class="stat-num">200+</div><div class="stat-label">Projecten</div></div>
+      <div class="stat-item"><div class="stat-num">98%</div><div class="stat-label">Tevreden klanten</div></div>
+    </div>
+  </div>
+
+  <!-- Globe visual -->
+  <div class="hero-visual">
+    <svg viewBox="0 0 360 360" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <defs>
+        <linearGradient id="hg1" x1="60" y1="0" x2="300" y2="360" gradientUnits="userSpaceOnUse">
+          <stop offset="0%" stop-color="#0E3D5C"/>
+          <stop offset="100%" stop-color="#00C9A7"/>
+        </linearGradient>
+        <radialGradient id="hglow" cx="50%" cy="50%" r="50%">
+          <stop offset="0%" stop-color="#00C9A7" stop-opacity="0.12"/>
+          <stop offset="100%" stop-color="#00C9A7" stop-opacity="0"/>
+        </radialGradient>
+        <clipPath id="hgc"><circle cx="180" cy="180" r="145"/></clipPath>
+        <filter id="hf"><feGaussianBlur stdDeviation="5" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+      </defs>
+      <!-- Outer glow -->
+      <circle cx="180" cy="180" r="180" fill="url(#hglow)"/>
+      <!-- Globe -->
+      <circle cx="180" cy="180" r="145" fill="url(#hg1)"/>
+      <!-- Grid -->
+      <g clip-path="url(#hgc)" fill="none" stroke="rgba(255,255,255,0.14)" stroke-width="1">
+        <ellipse cx="180" cy="180" rx="145" ry="42"/>
+        <ellipse cx="180" cy="180" rx="145" ry="90"/>
+        <ellipse cx="180" cy="180" rx="145" ry="126"/>
+        <line x1="35" y1="180" x2="325" y2="180"/>
+        <line x1="180" y1="35" x2="180" y2="325"/>
+        <path d="M180,35 Q240,180 180,325"/>
+        <path d="M180,35 Q120,180 180,325"/>
+        <path d="M180,35 Q290,180 180,325"/>
+        <path d="M180,35 Q70,180 180,325"/>
+      </g>
+      <!-- Highlight -->
+      <ellipse cx="140" cy="120" rx="38" ry="22" fill="rgba(255,255,255,0.08)" transform="rotate(-25 140 120)"/>
+      <!-- Rim -->
+      <circle cx="180" cy="180" r="145" fill="none" stroke="#00C9A7" stroke-width="3" filter="url(#hf)"/>
+
+      <!-- Chain links — back (dim) -->
+      <g opacity="0.18" fill="none" stroke="#00C9A7" stroke-width="6" stroke-linecap="round">
+        <rect x="166" y="42" width="28" height="14" rx="7" transform="rotate(0 180 49)"/>
+        <rect x="173" y="56" width="14" height="28" rx="7" transform="rotate(0 180 70)"/>
+        <rect x="198" y="62" width="28" height="14" rx="7" transform="rotate(30 212 69)"/>
+        <rect x="216" y="76" width="14" height="28" rx="7" transform="rotate(15 223 90)"/>
+        <rect x="160" y="276" width="28" height="14" rx="7"/>
+        <rect x="147" y="256" width="14" height="28" rx="7"/>
+        <rect x="118" y="252" width="28" height="14" rx="7" transform="rotate(-30 132 259)"/>
+        <rect x="96" y="238" width="14" height="28" rx="7" transform="rotate(-15 103 252)"/>
+      </g>
+
+      <!-- Rim over back chain -->
+      <circle cx="180" cy="180" r="145" fill="none" stroke="#00C9A7" stroke-width="2.5" opacity="0.6"/>
+
+      <!-- Chain links — front (bright) -->
+      <g fill="none" stroke="#00C9A7" stroke-width="7" stroke-linecap="round">
+        <rect x="274" y="128" width="30" height="14" rx="7" transform="rotate(38 289 135)"/>
+        <rect x="258" y="150" width="14" height="30" rx="7" transform="rotate(28 265 165)"/>
+        <rect x="238" y="166" width="30" height="14" rx="7" transform="rotate(18 253 173)"/>
+        <rect x="220" y="182" width="14" height="30" rx="7" transform="rotate(8 227 197)"/>
+        <rect x="196" y="194" width="30" height="14" rx="7" transform="rotate(-4 211 201)"/>
+        <rect x="172" y="196" width="14" height="30" rx="7" transform="rotate(-14 179 211)"/>
+        <rect x="146" y="188" width="30" height="14" rx="7" transform="rotate(-26 161 195)"/>
+        <rect x="120" y="172" width="14" height="30" rx="7" transform="rotate(-38 127 187)"/>
+        <rect x="98" y="152" width="30" height="14" rx="7" transform="rotate(-48 113 159)"/>
+      </g>
+    </svg>
+  </div>
+</section>
+
+<!-- ─── DIENSTEN ─── -->
+<section id="diensten">
+  <div class="reveal">
+    <div class="section-label">Wat wij doen</div>
+    <h2>Onze diensten</h2>
+    <p class="section-sub">Van strategische analyse tot operationele uitvoering — wij dekken de volledige supply chain.</p>
+  </div>
+  <div class="services-grid">
+    <div class="service-card reveal">
+      <div class="service-icon">🔗</div>
+      <div class="service-title">Supply Chain Analyse</div>
+      <div class="service-desc">Grondige doorlichting van uw huidige keten. Wij identificeren knelpunten, risico's en kansen voor kostenreductie en efficiëntieverbetering.</div>
+      <div class="service-tags"><span class="tag">Quickscan</span><span class="tag">Gap-analyse</span><span class="tag">Benchmarking</span></div>
+    </div>
+    <div class="service-card reveal">
+      <div class="service-icon">🌐</div>
+      <div class="service-title">Leveranciersbeheer</div>
+      <div class="service-desc">Selectie, evaluatie en ontwikkeling van uw leveranciersnetwerk. Wij zorgen voor een robuust en veerkrachtig inkoopecoysteem.</div>
+      <div class="service-tags"><span class="tag">Sourcing</span><span class="tag">SRM</span><span class="tag">Risicobeheer</span></div>
+    </div>
+    <div class="service-card reveal">
+      <div class="service-icon">📊</div>
+      <div class="service-title">Digitalisering & Data</div>
+      <div class="service-desc">Implementatie van digitale oplossingen voor real-time inzicht in uw supply chain. Van ERP-advies tot dashboards en KPI-rapportages.</div>
+      <div class="service-tags"><span class="tag">ERP</span><span class="tag">Dashboards</span><span class="tag">Automatisering</span></div>
+    </div>
+    <div class="service-card reveal">
+      <div class="service-icon">⚡</div>
+      <div class="service-title">Procesoptimalisatie</div>
+      <div class="service-desc">Lean-methodieken toegepast op uw logistieke en operationele processen. Minder verspilling, hogere doorloopsnelheid, lagere kosten.</div>
+      <div class="service-tags"><span class="tag">Lean</span><span class="tag">Six Sigma</span><span class="tag">S&OP</span></div>
+    </div>
+    <div class="service-card reveal">
+      <div class="service-icon">🛡️</div>
+      <div class="service-title">Risico & Compliance</div>
+      <div class="service-desc">Identificatie en mitigatie van supply chain risico's. Wij zorgen dat uw keten voldoet aan wet- en regelgeving en klaar is voor verstoringen.</div>
+      <div class="service-tags"><span class="tag">Risk mapping</span><span class="tag">Compliance</span><span class="tag">Continuïteit</span></div>
+    </div>
+    <div class="service-card reveal">
+      <div class="service-icon">🚀</div>
+      <div class="service-title">Interim Management</div>
+      <div class="service-desc">Tijdelijke versterking van uw supply chain team. Onze experts springen in bij verandertrajecten, groei of onverwachte capaciteitstekorten.</div>
+      <div class="service-tags"><span class="tag">Interim</span><span class="tag">Projectleiding</span><span class="tag">Change</span></div>
+    </div>
+  </div>
+</section>
+
+<!-- ─── AANPAK ─── -->
+<section id="aanpak">
+  <div class="reveal" style="text-align:center;max-width:560px;margin:0 auto;">
+    <div class="section-label">Hoe we werken</div>
+    <h2>Onze aanpak</h2>
+    <p class="section-sub" style="margin:0 auto 0;">Resultaatgericht, praktisch en altijd in nauwe samenwerking met uw team.</p>
+  </div>
+  <div class="process-grid">
+    <div class="process-step reveal">
+      <div class="step-num">01</div>
+      <div class="step-title">Intake & Scan</div>
+      <div class="step-desc">Gratis kennismaking en quickscan van uw huidige supply chain situatie.</div>
+    </div>
+    <div class="process-step reveal">
+      <div class="step-num">02</div>
+      <div class="step-title">Analyse</div>
+      <div class="step-desc">Diepgaande analyse van processen, data en leveranciersrelaties.</div>
+    </div>
+    <div class="process-step reveal">
+      <div class="step-num">03</div>
+      <div class="step-title">Verbeterplan</div>
+      <div class="step-desc">Concreet plan met prioriteiten, tijdlijn en verwachte ROI.</div>
+    </div>
+    <div class="process-step reveal">
+      <div class="step-num">04</div>
+      <div class="step-title">Uitvoering</div>
+      <div class="step-desc">Implementatie samen met uw team, met vaste voortgangsrapportages.</div>
+    </div>
+  </div>
+</section>
+
+<!-- ─── OVER GWA ─── -->
+<section id="over">
+  <div class="over-grid">
+    <div class="over-visual reveal">
+      <div class="over-card">
+        <div class="over-card-header">
+          <div class="over-avatar">G</div>
+          <div>
+            <div class="over-name">GWA Supply Chain Solutions</div>
+            <div class="over-role">Supply Chain Experts</div>
+          </div>
+        </div>
+        <div class="over-values">
+          <div class="over-value">
+            <div class="over-value-icon">🔗</div>
+            <div class="over-value-text"><strong>Verbinding</strong> — Wij geloven dat sterke ketens beginnen bij sterke relaties.</div>
+          </div>
+          <div class="over-value">
+            <div class="over-value-icon">🎯</div>
+            <div class="over-value-text"><strong>Resultaatgericht</strong> — Concrete verbeteringen, geen abstracte adviezen.</div>
+          </div>
+          <div class="over-value">
+            <div class="over-value-icon">🌐</div>
+            <div class="over-value-text"><strong>Globaal & Lokaal</strong> — Internationale kennis, toegepast op uw specifieke situatie.</div>
+          </div>
+          <div class="over-value">
+            <div class="over-value-icon">⚡</div>
+            <div class="over-value-text"><strong>Snel schakelen</strong> — In een dynamische markt telt snelheid van handelen.</div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="over-content reveal">
+      <div class="section-label">Over ons</div>
+      <h2>Wij verbinden mensen, processen en systemen</h2>
+      <p>GWA Supply Chain Solutions is opgericht vanuit een duidelijke visie: supply chain management moet simpeler, transparanter en effectiever. Wij helpen organisaties in logistiek, productie, retail en de publieke sector om hun keten te versterken.</p>
+      <p>Met een team van ervaren supply chain professionals bieden wij onafhankelijk advies en hands-on ondersteuning — van quickscan tot volledige implementatie.</p>
+      <ul class="usp-list">
+        <li>Onafhankelijk en objectief advies</li>
+        <li>Bewezen methodieken (Lean, SCOR, S&OP)</li>
+        <li>Ervaring in meerdere sectoren</li>
+        <li>Van strategie tot operationele uitvoering</li>
+        <li>Vaste contactpersoon, korte lijnen</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- ─── QUICKSCAN ─── -->
+<section id="quickscan">
+  <div style="text-align:center;margin-bottom:56px;" class="reveal">
+    <div class="section-label">Gratis tool</div>
+    <h2>Supply Chain Quickscan</h2>
+    <p class="section-sub" style="margin:0 auto;">Beantwoord 10 vragen en ontvang direct inzicht in de kansen en risico's van uw supply chain.</p>
+  </div>
+
+  <div class="scan-wrap">
+    <div class="progress-wrap" id="scanProgress">
+      <div class="progress-meta">
+        <span class="progress-label">Voortgang</span>
+        <span class="progress-count" id="scanCount">Stap 1 van 4</span>
+      </div>
+      <div class="progress-track">
+        <div class="progress-fill" id="scanFill" style="width:25%"></div>
+      </div>
+    </div>
+
+    <!-- Section 1 -->
+    <div class="scan-card active" id="sc-1">
+      <div class="scan-num">Deel 01 / 04</div>
+      <div class="scan-title">Bedrijfsprofiel</div>
+      <div class="scan-desc">Vertel ons over uw organisatie zodat we de resultaten kunnen personaliseren.</div>
+
+      <div class="question">
+        <div class="q-label"><span class="qn">Q1</span> In welke sector is uw bedrijf actief?</div>
+        <div class="options" id="sq1">
+          <button class="opt" onclick="sSelect(this,'sq1')"><span class="chk"></span>Logistiek & Transport</button>
+          <button class="opt" onclick="sSelect(this,'sq1')"><span class="chk"></span>Productie & Industrie</button>
+          <button class="opt" onclick="sSelect(this,'sq1')"><span class="chk"></span>Retail & E-commerce</button>
+          <button class="opt" onclick="sSelect(this,'sq1')"><span class="chk"></span>Overheid & Non-profit</button>
+          <button class="opt" onclick="sSelect(this,'sq1')"><span class="chk"></span>Overig</button>
+        </div>
+      </div>
+
+      <div class="question">
+        <div class="q-label"><span class="qn">Q2</span> Wat is de grootste uitdaging in uw supply chain?</div>
+        <div class="options" id="sq2">
+          <button class="opt" onclick="sSelect(this,'sq2')"><span class="chk"></span>Voorraadbeheer & tekorten</button>
+          <button class="opt" onclick="sSelect(this,'sq2')"><span class="chk"></span>Leverbetrouwbaarheid leveranciers</button>
+          <button class="opt" onclick="sSelect(this,'sq2')"><span class="chk"></span>Kosten & margedruk</button>
+          <button class="opt" onclick="sSelect(this,'sq2')"><span class="chk"></span>Gebrek aan inzicht & data</button>
+          <button class="opt" onclick="sSelect(this,'sq2')"><span class="chk"></span>Schaalbaarheid & groei</button>
+        </div>
+      </div>
+
+      <div class="nav-row">
+        <div></div>
+        <button class="btn-next" onclick="sNext(1)">Volgende →</button>
+      </div>
+    </div>
+
+    <!-- Section 2 -->
+    <div class="scan-card" id="sc-2">
+      <div class="scan-num">Deel 02 / 04</div>
+      <div class="scan-title">Inkoop & Leveranciers</div>
+      <div class="scan-desc">Hoe robuust is uw inkoopproces?</div>
+
+      <div class="question">
+        <div class="q-label"><span class="qn">Q3</span> Beschikt u over alternatieve leveranciers bij uitval?</div>
+        <div class="options" id="sq3">
+          <button class="opt" onclick="sSelect(this,'sq3')"><span class="chk"></span>Ja, voor alle kritieke producten</button>
+          <button class="opt" onclick="sSelect(this,'sq3')"><span class="chk"></span>Ja, maar slechts gedeeltelijk</button>
+          <button class="opt" onclick="sSelect(this,'sq3')"><span class="chk"></span>Nee, maar we zijn dit aan het opzetten</button>
+          <button class="opt" onclick="sSelect(this,'sq3')"><span class="chk"></span>Nee, volledig afhankelijk van één leverancier</button>
+        </div>
+      </div>
+
+      <div class="question">
+        <div class="q-label"><span class="qn">Q4</span> Hoe beoordeelt u leveranciersprestaties? (1 = nooit, 5 = altijd gestructureerd)</div>
+        <div class="scale-row" id="sq4">
+          <button class="scl" onclick="sScl(this,'sq4',1)">1</button>
+          <button class="scl" onclick="sScl(this,'sq4',2)">2</button>
+          <button class="scl" onclick="sScl(this,'sq4',3)">3</button>
+          <button class="scl" onclick="sScl(this,'sq4',4)">4</button>
+          <button class="scl" onclick="sScl(this,'sq4',5)">5</button>
+        </div>
+        <div class="scale-lbl"><span>Nooit</span><span>Altijd</span></div>
+      </div>
+
+      <div class="nav-row">
+        <button class="btn-prev" onclick="sPrev(2)">← Terug</button>
+        <button class="btn-next" onclick="sNext(2)">Volgende →</button>
+      </div>
+    </div>
+
+    <!-- Section 3 -->
+    <div class="scan-card" id="sc-3">
+      <div class="scan-num">Deel 03 / 04</div>
+      <div class="scan-title">Operatie & Digitalisering</div>
+      <div class="scan-desc">In hoeverre zijn uw processen digitaal en inzichtelijk?</div>
+
+      <div class="question">
+        <div class="q-label"><span class="qn">Q5</span> Welk systeem gebruikt u voor supply chain beheer?</div>
+        <div class="options" id="sq5">
+          <button class="opt" onclick="sSelect(this,'sq5')"><span class="chk"></span>Geïntegreerd ERP-systeem (SAP, Oracle, etc.)</button>
+          <button class="opt" onclick="sSelect(this,'sq5')"><span class="chk"></span>Losse software per afdeling</button>
+          <button class="opt" onclick="sSelect(this,'sq5')"><span class="chk"></span>Excel / spreadsheets</button>
+          <button class="opt" onclick="sSelect(this,'sq5')"><span class="chk"></span>Grotendeels handmatig</button>
+        </div>
+      </div>
+
+      <div class="question">
+        <div class="q-label"><span class="qn">Q6</span> Hoe snel heeft u inzicht in voorraad en levertijden? (1 = geen inzicht, 5 = real-time)</div>
+        <div class="scale-row" id="sq6">
+          <button class="scl" onclick="sScl(this,'sq6',1)">1</button>
+          <button class="scl" onclick="sScl(this,'sq6',2)">2</button>
+          <button class="scl" onclick="sScl(this,'sq6',3)">3</button>
+          <button class="scl" onclick="sScl(this,'sq6',4)">4</button>
+          <button class="scl" onclick="sScl(this,'sq6',5)">5</button>
+        </div>
+        <div class="scale-lbl"><span>Geen inzicht</span><span>Real-time</span></div>
+      </div>
+
+      <div class="question">
+        <div class="q-label"><span class="qn">Q7</span> Hoe vaak worden supply chain processen geëvalueerd?</div>
+        <div class="options" id="sq7">
+          <button class="opt" onclick="sSelect(this,'sq7')"><span class="chk"></span>Maandelijks of vaker</button>
+          <button class="opt" onclick="sSelect(this,'sq7')"><span class="chk"></span>Ieder kwartaal</button>
+          <button class="opt" onclick="sSelect(this,'sq7')"><span class="chk"></span>Jaarlijks</button>
+          <button class="opt" onclick="sSelect(this,'sq7')"><span class="chk"></span>Zelden of nooit</button>
+        </div>
+      </div>
+
+      <div class="nav-row">
+        <button class="btn-prev" onclick="sPrev(3)">← Terug</button>
+        <button class="btn-next" onclick="sNext(3)">Volgende →</button>
+      </div>
+    </div>
+
+    <!-- Section 4 -->
+    <div class="scan-card" id="sc-4">
+      <div class="scan-num">Deel 04 / 04</div>
+      <div class="scan-title">Uw gegevens</div>
+      <div class="scan-desc">Waar mogen wij de resultaten en ons advies naartoe sturen?</div>
+
+      <div class="question">
+        <div class="q-label"><span class="qn">Q8</span> Welke verbetering heeft de hoogste prioriteit?</div>
+        <div class="options" id="sq8">
+          <button class="opt" onclick="sSelect(this,'sq8')"><span class="chk"></span>Kosten reduceren</button>
+          <button class="opt" onclick="sSelect(this,'sq8')"><span class="chk"></span>Leverbetrouwbaarheid verhogen</button>
+          <button class="opt" onclick="sSelect(this,'sq8')"><span class="chk"></span>Digitalisering & inzicht</button>
+          <button class="opt" onclick="sSelect(this,'sq8')"><span class="chk"></span>Risico's beheersen</button>
+        </div>
+      </div>
+
+      <div class="divider"></div>
+
+      <div class="form-grid">
+        <div class="fg"><label>Voornaam</label><input type="text" id="sf1" placeholder="Jan"/></div>
+        <div class="fg"><label>Achternaam</label><input type="text" id="sf2" placeholder="de Vries"/></div>
+        <div class="fg"><label>Bedrijf</label><input type="text" id="sf3" placeholder="Bedrijf B.V."/></div>
+        <div class="fg"><label>Functie</label><input type="text" id="sf4" placeholder="Supply Chain Manager"/></div>
+        <div class="fg full"><label>E-mailadres</label><input type="email" id="sf5" placeholder="jan@bedrijf.nl"/></div>
+      </div>
+
+      <div class="nav-row">
+        <button class="btn-prev" onclick="sPrev(4)">← Terug</button>
+        <button class="btn-next" onclick="sResults()">Bekijk resultaten 🔗</button>
+      </div>
+    </div>
+
+    <!-- Results -->
+    <div class="result-screen" id="sResults">
+      <div class="result-header">
+        <div class="result-icon">🔗</div>
+        <div class="result-title">Uw Supply Chain Scan</div>
+        <div class="result-sub">Persoonlijke inzichten op basis van uw antwoorden</div>
+      </div>
+      <div class="score-grid" id="sScoreGrid"></div>
+      <div class="insights" id="sInsights"></div>
+      <div class="cta-box">
+        <h3>Klaar voor de volgende stap?</h3>
+        <p>GWA analyseert uw supply chain grondig en levert een concreet verbeterplan. Gratis intakegesprek, geen verplichtingen.</p>
+        <a href="#contact" class="btn-primary" style="display:inline-flex;text-decoration:none;">Plan een gratis intake →</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ─── CONTACT ─── -->
+<section id="contact">
+  <div class="contact-grid">
+    <div class="contact-info reveal">
+      <div class="section-label">Neem contact op</div>
+      <h2>Laten we kennismaken</h2>
+      <p>Heeft u vragen of wilt u direct een afspraak plannen? Wij reageren binnen één werkdag.</p>
+      <div class="contact-items">
+        <div class="contact-item">
+          <div class="contact-item-icon">📧</div>
+          <div><div class="contact-item-label">E-mail</div><div class="contact-item-val">info@gwa-supplychain.nl</div></div>
+        </div>
+        <div class="contact-item">
+          <div class="contact-item-icon">📞</div>
+          <div><div class="contact-item-label">Telefoon</div><div class="contact-item-val">+31 6 55 56 47 64</div></div>
+        </div>
+        <div class="contact-item">
+          <div class="contact-item-icon">📍</div>
+          <div><div class="contact-item-label">Locatie</div><div class="contact-item-val">Nederland</div></div>
+        </div>
+      </div>
+    </div>
+    <div class="contact-form-wrap reveal">
+      <div class="contact-form-title">Stuur een bericht</div>
+      <div class="cf-group"><label>Naam</label><input type="text" placeholder="Uw naam"/></div>
+      <div class="cf-group"><label>E-mail</label><input type="email" placeholder="uw@email.nl"/></div>
+      <div class="cf-group"><label>Bedrijf</label><input type="text" placeholder="Bedrijfsnaam"/></div>
+      <div class="cf-group"><label>Bericht</label><textarea placeholder="Hoe kunnen wij u helpen?"></textarea></div>
+      <button class="btn-primary" style="width:100%;justify-content:center;">Verstuur bericht →</button>
+    </div>
+  </div>
+</section>
+
+<!-- ─── FOOTER ─── -->
+<footer>
+  <div class="footer-top">
+    <a href="#hero" class="nav-logo" style="text-decoration:none;">
+      <svg width="32" height="32" viewBox="0 0 36 36" fill="none">
+        <circle cx="18" cy="18" r="16" fill="url(#fl1)" stroke="#00C9A7" stroke-width="1.2"/>
+        <ellipse cx="18" cy="18" rx="16" ry="6" fill="none" stroke="rgba(255,255,255,0.2)" stroke-width="0.7"/>
+        <line x1="2" y1="18" x2="34" y2="18" stroke="rgba(255,255,255,0.2)" stroke-width="0.7"/>
+        <g transform="translate(18,18) rotate(-38)">
+          <rect x="-7" y="-3" width="14" height="6" rx="3" fill="none" stroke="#00C9A7" stroke-width="1.8"/>
+          <rect x="-3" y="-7" width="6" height="14" rx="3" fill="none" stroke="#00C9A7" stroke-width="1.8"/>
+        </g>
+        <defs><linearGradient id="fl1" x1="0" y1="0" x2="36" y2="36" gradientUnits="userSpaceOnUse"><stop offset="0%" stop-color="#0E3D5C"/><stop offset="100%" stop-color="#00C9A7"/></linearGradient></defs>
+      </svg>
+      <div class="nav-logo-text">GWA <span>SUPPLY CHAIN</span></div>
+    </a>
+    <div class="footer-links">
+      <a href="#diensten">Diensten</a>
+      <a href="#aanpak">Aanpak</a>
+      <a href="#over">Over ons</a>
+      <a href="#quickscan">Quickscan</a>
+      <a href="#contact">Contact</a>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <div class="footer-copy">© 2026 GWA Supply Chain Solutions. Alle rechten voorbehouden. &nbsp;|&nbsp; <a href="privacy.html" style="color:var(--teal);text-decoration:none;">Privacyverklaring</a></div>
+    <div class="footer-copy">Gemaakt met <span class="footer-teal">♥</span> in Nederland</div>
+  </div>
+</footer>
+
+<script>
+// ── Scroll reveal ──
+const observer = new IntersectionObserver((entries) => {
+  entries.forEach(e => { if(e.isIntersecting) { e.target.classList.add('visible'); }});
+}, {threshold:0.12});
+document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+
+// ── Quickscan logic ──
+const sAnswers = {};
+
+function sSelect(btn, gid) {
+  document.querySelectorAll(`#${gid} .opt`).forEach(b => b.classList.remove('sel'));
+  btn.classList.add('sel');
+  sAnswers[gid] = btn.textContent.trim();
+}
+
+function sScl(btn, gid, val) {
+  document.querySelectorAll(`#${gid} .scl`).forEach(b => b.classList.remove('sel'));
+  btn.classList.add('sel');
+  sAnswers[gid] = val;
+}
+
+function sNext(cur) {
+  document.getElementById(`sc-${cur}`).classList.remove('active');
+  document.getElementById(`sc-${cur+1}`).classList.add('active');
+  sProgress(cur+1);
+  document.getElementById('quickscan').scrollIntoView({behavior:'smooth'});
+}
+
+function sPrev(cur) {
+  document.getElementById(`sc-${cur}`).classList.remove('active');
+  document.getElementById(`sc-${cur-1}`).classList.add('active');
+  sProgress(cur-1);
+  document.getElementById('quickscan').scrollIntoView({behavior:'smooth'});
+}
+
+function sProgress(step) {
+  document.getElementById('scanFill').style.width = (step/4*100)+'%';
+  document.getElementById('scanCount').textContent = `Stap ${step} van 4`;
+}
+
+function sResults() {
+  document.querySelectorAll('.scan-card').forEach(c => c.classList.remove('active'));
+  document.getElementById('scanProgress').style.display = 'none';
+
+  const q4 = sAnswers['sq4'] || 3;
+  const q6 = sAnswers['sq6'] || 3;
+
+  const levScore = Math.round(((q4/5)*100 + (sAnswers['sq3']&&sAnswers['sq3'].includes('alle')?100:sAnswers['sq3']&&sAnswers['sq3'].includes('gedeeltelijk')?60:25))/2);
+  const digScore = Math.round(((q6/5)*100 + (sAnswers['sq5']&&sAnswers['sq5'].includes('ERP')?100:sAnswers['sq5']&&sAnswers['sq5'].includes('Losse')?60:sAnswers['sq5']&&sAnswers['sq5'].includes('Excel')?35:15))/2);
+  const opsScore = Math.round(sAnswers['sq7']&&sAnswers['sq7'].includes('Maandelijks')?92:sAnswers['sq7']&&sAnswers['sq7'].includes('kwartaal')?68:sAnswers['sq7']&&sAnswers['sq7'].includes('Jaarlijks')?38:15);
+  const total = Math.round((levScore+digScore+opsScore)/3);
+
+  document.getElementById('sScoreGrid').innerHTML = `
+    <div class="score-card"><div class="score-val">${total}%</div><div class="score-lbl">Totaalscore</div></div>
+    <div class="score-card"><div class="score-val">${levScore}%</div><div class="score-lbl">Leveranciers</div></div>
+    <div class="score-card"><div class="score-val">${digScore}%</div><div class="score-lbl">Digitalisering</div></div>
+    <div class="score-card"><div class="score-val">${opsScore}%</div><div class="score-lbl">Operatie</div></div>
+  `;
+
+  const ins = [];
+  if(sAnswers['sq3']&&(sAnswers['sq3'].includes('Nee')||sAnswers['sq3'].includes('één')))
+    ins.push({t:'warn',txt:'<strong>Leveranciersrisico:</strong> Beperkte fallback bij uitval vergroot continuïteitsrisico aanzienlijk.'});
+  else ins.push({t:'good',txt:'<strong>Leveranciersspreiding:</strong> Alternatieven beschikbaar versterkt uw leveringszekerheid.'});
+
+  if(sAnswers['sq5']&&(sAnswers['sq5'].includes('Excel')||sAnswers['sq5'].includes('handmatig')))
+    ins.push({t:'warn',txt:'<strong>Digitalisering:</strong> Handmatige processen verhogen foutkans en vertragen besluitvorming.'});
+  else ins.push({t:'good',txt:'<strong>Digitalisering:</strong> Digitale systemen geven u een solide basis voor verdere optimalisatie.'});
+
+  if(q6<=2) ins.push({t:'warn',txt:'<strong>Real-time inzicht:</strong> Beperkt inzicht in voorraad en levertijden maakt snel schakelen lastig.'});
+  else if(q6>=4) ins.push({t:'good',txt:'<strong>Real-time inzicht:</strong> Sterk data-inzicht stelt u in staat proactief te sturen.'});
+
+  if(sAnswers['sq7']&&(sAnswers['sq7'].includes('Zelden')||sAnswers['sq7'].includes('Jaarlijks')))
+    ins.push({t:'warn',txt:'<strong>Procesverbetering:</strong> Zelden evalueren remt continue verbetering in een dynamische markt.'});
+  else ins.push({t:'good',txt:'<strong>Procesverbetering:</strong> Regelmatige evaluaties vormen een sterke basis voor optimalisatie.'});
+
+  document.getElementById('sInsights').innerHTML = `<h3>Uw inzichten</h3>${ins.map(i=>`<div class="ins-item"><div class="ins-dot ${i.t}"></div><div class="ins-text">${i.txt}</div></div>`).join('')}`;
+
+  document.getElementById('sResults').classList.add('active');
+  document.getElementById('quickscan').scrollIntoView({behavior:'smooth'});
+}
+</script>
+
+<!-- WhatsApp Button -->
+<a href="https://wa.me/31655564764" target="_blank" rel="noopener" 
+   style="position:fixed;bottom:24px;right:24px;z-index:999;width:56px;height:56px;background:#25D366;border-radius:50%;display:flex;align-items:center;justify-content:center;box-shadow:0 4px 20px rgba(37,211,102,0.4);transition:all 0.2s;text-decoration:none;"
+   onmouseover="this.style.transform='scale(1.1)'" onmouseout="this.style.transform='scale(1)'">
+  <svg width="28" height="28" viewBox="0 0 24 24" fill="white">
+    <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
+  </svg>
+</a>
+
+<!-- Cookie Banner -->
+<div id="cookieBanner" style="display:none;position:fixed;bottom:0;left:0;right:0;z-index:998;background:rgba(10,31,53,0.98);backdrop-filter:blur(10px);border-top:1px solid rgba(0,201,167,0.2);padding:16px 6%;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:16px;">
+  <p style="color:rgba(255,255,255,0.75);font-size:13px;margin:0;max-width:600px;">
+    Wij gebruiken alleen functionele cookies die noodzakelijk zijn voor het correct werken van de website. Geen tracking, geen advertenties. 
+    <a href="privacy.html" style="color:#00C9A7;text-decoration:none;">Lees onze privacyverklaring</a>
+  </p>
+  <button onclick="acceptCookies()" style="background:#00C9A7;color:#060F1E;border:none;padding:10px 24px;border-radius:8px;font-family:inherit;font-size:13px;font-weight:600;cursor:pointer;white-space:nowrap;">Begrepen</button>
+</div>
+
+<script>
+// Cookie banner
+function acceptCookies() {
+  localStorage.setItem('gwa_cookies', 'accepted');
+  document.getElementById('cookieBanner').style.display = 'none';
+}
+window.addEventListener('load', function() {
+  if (!localStorage.getItem('gwa_cookies')) {
+    document.getElementById('cookieBanner').style.display = 'flex';
+  }
+});
+</script>
+</body>
+</html>
