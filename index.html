@@ -43,6 +43,8 @@ body{
   color:var(--white);
   font-family:'DM Sans',sans-serif;
   overflow-x:hidden;
+  max-width:1920px;
+  margin:0 auto;
   cursor:default;
 }
 
@@ -769,25 +771,7 @@ footer{
 
 <!-- ─── NAV ─── -->
 <nav>
-  <a href="#hero" class="nav-logo">
-    <svg viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg">
-      <circle cx="18" cy="18" r="16" fill="url(#nl1)" stroke="#00C9A7" stroke-width="1.2"/>
-      <ellipse cx="18" cy="18" rx="16" ry="6" fill="none" stroke="rgba(255,255,255,0.2)" stroke-width="0.7"/>
-      <line x1="2" y1="18" x2="34" y2="18" stroke="rgba(255,255,255,0.2)" stroke-width="0.7"/>
-      <line x1="18" y1="2" x2="18" y2="34" stroke="rgba(255,255,255,0.2)" stroke-width="0.7"/>
-      <g transform="translate(18,18) rotate(-38)">
-        <rect x="-7" y="-3" width="14" height="6" rx="3" fill="none" stroke="#00C9A7" stroke-width="1.8"/>
-        <rect x="-3" y="-7" width="6" height="14" rx="3" fill="none" stroke="#00C9A7" stroke-width="1.8"/>
-      </g>
-      <defs>
-        <linearGradient id="nl1" x1="0" y1="0" x2="36" y2="36" gradientUnits="userSpaceOnUse">
-          <stop offset="0%" stop-color="#0E3D5C"/>
-          <stop offset="100%" stop-color="#00C9A7"/>
-        </linearGradient>
-      </defs>
-    </svg>
-    <img src="logo.png" style="height:44px;width:auto;margin-right:8px;" alt="GWA Logo"/><div class="nav-logo-text">GWA <span>SUPPLY CHAIN & AI</span></div>
-  </a>
+  <a href="#hero" class="nav-logo"><img src="logo.png" style="height:48px;width:auto;" alt="GWA Supply Chain & AI Solutions"/></a>
   <ul class="nav-links">
     <li><a href="#diensten">Diensten</a></li>
     <li><a href="#aanpak">Aanpak</a></li>
@@ -823,68 +807,7 @@ footer{
 
   <!-- Globe visual -->
   <div class="hero-visual">
-    <svg viewBox="0 0 360 360" fill="none" xmlns="http://www.w3.org/2000/svg">
-      <defs>
-        <linearGradient id="hg1" x1="60" y1="0" x2="300" y2="360" gradientUnits="userSpaceOnUse">
-          <stop offset="0%" stop-color="#0E3D5C"/>
-          <stop offset="100%" stop-color="#00C9A7"/>
-        </linearGradient>
-        <radialGradient id="hglow" cx="50%" cy="50%" r="50%">
-          <stop offset="0%" stop-color="#00C9A7" stop-opacity="0.12"/>
-          <stop offset="100%" stop-color="#00C9A7" stop-opacity="0"/>
-        </radialGradient>
-        <clipPath id="hgc"><circle cx="180" cy="180" r="145"/></clipPath>
-        <filter id="hf"><feGaussianBlur stdDeviation="5" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
-      </defs>
-      <!-- Outer glow -->
-      <circle cx="180" cy="180" r="180" fill="url(#hglow)"/>
-      <!-- Globe -->
-      <circle cx="180" cy="180" r="145" fill="url(#hg1)"/>
-      <!-- Grid -->
-      <g clip-path="url(#hgc)" fill="none" stroke="rgba(255,255,255,0.14)" stroke-width="1">
-        <ellipse cx="180" cy="180" rx="145" ry="42"/>
-        <ellipse cx="180" cy="180" rx="145" ry="90"/>
-        <ellipse cx="180" cy="180" rx="145" ry="126"/>
-        <line x1="35" y1="180" x2="325" y2="180"/>
-        <line x1="180" y1="35" x2="180" y2="325"/>
-        <path d="M180,35 Q240,180 180,325"/>
-        <path d="M180,35 Q120,180 180,325"/>
-        <path d="M180,35 Q290,180 180,325"/>
-        <path d="M180,35 Q70,180 180,325"/>
-      </g>
-      <!-- Highlight -->
-      <ellipse cx="140" cy="120" rx="38" ry="22" fill="rgba(255,255,255,0.08)" transform="rotate(-25 140 120)"/>
-      <!-- Rim -->
-      <circle cx="180" cy="180" r="145" fill="none" stroke="#00C9A7" stroke-width="3" filter="url(#hf)"/>
-
-      <!-- Chain links — back (dim) -->
-      <g opacity="0.18" fill="none" stroke="#00C9A7" stroke-width="6" stroke-linecap="round">
-        <rect x="166" y="42" width="28" height="14" rx="7" transform="rotate(0 180 49)"/>
-        <rect x="173" y="56" width="14" height="28" rx="7" transform="rotate(0 180 70)"/>
-        <rect x="198" y="62" width="28" height="14" rx="7" transform="rotate(30 212 69)"/>
-        <rect x="216" y="76" width="14" height="28" rx="7" transform="rotate(15 223 90)"/>
-        <rect x="160" y="276" width="28" height="14" rx="7"/>
-        <rect x="147" y="256" width="14" height="28" rx="7"/>
-        <rect x="118" y="252" width="28" height="14" rx="7" transform="rotate(-30 132 259)"/>
-        <rect x="96" y="238" width="14" height="28" rx="7" transform="rotate(-15 103 252)"/>
-      </g>
-
-      <!-- Rim over back chain -->
-      <circle cx="180" cy="180" r="145" fill="none" stroke="#00C9A7" stroke-width="2.5" opacity="0.6"/>
-
-      <!-- Chain links — front (bright) -->
-      <g fill="none" stroke="#00C9A7" stroke-width="7" stroke-linecap="round">
-        <rect x="274" y="128" width="30" height="14" rx="7" transform="rotate(38 289 135)"/>
-        <rect x="258" y="150" width="14" height="30" rx="7" transform="rotate(28 265 165)"/>
-        <rect x="238" y="166" width="30" height="14" rx="7" transform="rotate(18 253 173)"/>
-        <rect x="220" y="182" width="14" height="30" rx="7" transform="rotate(8 227 197)"/>
-        <rect x="196" y="194" width="30" height="14" rx="7" transform="rotate(-4 211 201)"/>
-        <rect x="172" y="196" width="14" height="30" rx="7" transform="rotate(-14 179 211)"/>
-        <rect x="146" y="188" width="30" height="14" rx="7" transform="rotate(-26 161 195)"/>
-        <rect x="120" y="172" width="14" height="30" rx="7" transform="rotate(-38 127 187)"/>
-        <rect x="98" y="152" width="30" height="14" rx="7" transform="rotate(-48 113 159)"/>
-      </g>
-    </svg>
+    <img src="logo.png" style="width:100%;max-width:420px;filter:drop-shadow(0 0 40px rgba(0,201,167,0.3));" alt="GWA Logo"/>
   </div>
 </section>
 
@@ -1231,19 +1154,7 @@ footer{
 <!-- ─── FOOTER ─── -->
 <footer>
   <div class="footer-top">
-    <a href="#hero" class="nav-logo" style="text-decoration:none;">
-      <svg width="32" height="32" viewBox="0 0 36 36" fill="none">
-        <circle cx="18" cy="18" r="16" fill="url(#fl1)" stroke="#00C9A7" stroke-width="1.2"/>
-        <ellipse cx="18" cy="18" rx="16" ry="6" fill="none" stroke="rgba(255,255,255,0.2)" stroke-width="0.7"/>
-        <line x1="2" y1="18" x2="34" y2="18" stroke="rgba(255,255,255,0.2)" stroke-width="0.7"/>
-        <g transform="translate(18,18) rotate(-38)">
-          <rect x="-7" y="-3" width="14" height="6" rx="3" fill="none" stroke="#00C9A7" stroke-width="1.8"/>
-          <rect x="-3" y="-7" width="6" height="14" rx="3" fill="none" stroke="#00C9A7" stroke-width="1.8"/>
-        </g>
-        <defs><linearGradient id="fl1" x1="0" y1="0" x2="36" y2="36" gradientUnits="userSpaceOnUse"><stop offset="0%" stop-color="#0E3D5C"/><stop offset="100%" stop-color="#00C9A7"/></linearGradient></defs>
-      </svg>
-      <img src="logo.png" style="height:44px;width:auto;margin-right:8px;" alt="GWA Logo"/><div class="nav-logo-text">GWA <span>SUPPLY CHAIN & AI</span></div>
-    </a>
+    <a href="#hero" class="nav-logo" style="text-decoration:none;"><img src="logo.png" style="height:40px;width:auto;" alt="GWA"/></a>
     <div class="footer-links">
       <a href="#diensten">Diensten</a>
       <a href="#aanpak">Aanpak</a>
